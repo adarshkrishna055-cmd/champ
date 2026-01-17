@@ -1,3 +1,28 @@
+## What is pod ?
+
+A Kubernetes Pod (k8s Pod) is the smallest deployable unit in Kubernetes.
+
+A Pod can contain one container (most common) or multiple containers.
+
+Containers inside a Pod communicate using localhost.
+
+Pods are ephemeral (temporary). If a Pod dies, Kubernetes creates a new Pod, not the same one.
+
+All containers in a Pod :-
+
+  - Share the same IP address
+  - Share network ports
+  - Share storage (volumes)
+    
+
+### Simple example:
+
+* Pod = Room
+* Containers = People inside the room
+* They share the same space, network, and resources
+
+
+
 ## 1. vi mypodcrt.yml
 
 ```
