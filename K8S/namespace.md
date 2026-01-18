@@ -124,6 +124,19 @@ spec:
 kubectl apply -f mypodcrt.yml
 ```
 
+```
+get pods --all-namespaces
+```
+
+OR
+
+```
+kubectl get pods -A
+```
+
+```
+kubectl describe pod pod2 -n custom
+```
 
 --------------------------------------------------
 
