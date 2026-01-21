@@ -134,7 +134,7 @@ minikube service nginx-service
 
 Nginx welcome page will open in browser.
 
----
+
 
 ## Step 5: Scaling the Application
 
@@ -143,7 +143,7 @@ kubectl scale deployment nginx-deployment --replicas=4
 kubectl get pods
 ```
 
----
+
 
 ## Step 6: Pod & Logs Check
 
@@ -152,7 +152,7 @@ kubectl describe pod <pod-name>
 kubectl logs <pod-name>
 ```
 
----
+
 
 ## Step 7: Cleanup
 
