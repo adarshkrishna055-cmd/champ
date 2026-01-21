@@ -1,7 +1,14 @@
 # minikube-proj
 
 
+
 create instance ; install docker, minikube and kubectl
+
+```
+sudo apt update
+sudo apt install docker.io -y
+```
+
 
 ```
 eval $(minikube docker-env)
@@ -87,3 +94,4 @@ Test it : `ssh -i "key-name" -L 30000:192.168.49.2:30000 ubuntu@ec2-pub-ip`
 
 
 ------------------------------------------------
+
