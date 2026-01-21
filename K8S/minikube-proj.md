@@ -15,6 +15,14 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-a
 ```
 
 ```
+sudo usermod -aG docker $USER && newgrp docker
+```
+
+```
+sudo reboot
+```
+
+```
 eval $(minikube docker-env)
 ```
 
@@ -98,5 +106,6 @@ Test it : `ssh -i "key-name" -L 30000:192.168.49.2:30000 ubuntu@ec2-pub-ip`
 
 
 ------------------------------------------------
+
 
 
