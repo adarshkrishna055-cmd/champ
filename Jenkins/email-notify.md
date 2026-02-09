@@ -1,14 +1,12 @@
-# Jenkins email notification
-========================================
-
-#### step-1 :- create an ec2-instance ( ubuntu ) & install jenkins on it
-
-#### step-2 :- go to jenkins dashboard  -->  manage jenkins  --> plug-ins -->  installed plug-ins  --> ( Email Extension plugins ) ,,, if not then install
+## Jenkins email notification
 
 
-#### step-3 :- go to gmail & enable 2-step verification  --> go to home  --> search `app passwords`  --> app name = Jenkins ---> create  --> copy pw
+Go to jenkins dashboard  -->  manage jenkins  --> plug-ins -->  installed plug-ins  --> ( Email Extension plugins ) ,,, if not then install
 
-  - go to manage jenkins  --> Credentials  --> add Credentials
+Go to gmail & enable 2-step verification --> go to home --> search app passwords --> app name = Jenkins ---> create --> copy pw
+
+
+Go to manage jenkins  --> Credentials  --> add Credentials
 
         - Kind = username & password
         - Username = use your gmail id
@@ -93,3 +91,4 @@ pipeline {
 
 
 =========================================end====================================
+
