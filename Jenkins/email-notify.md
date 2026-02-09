@@ -38,57 +38,7 @@ Go to manage jenkins  --> Credentials  --> add Credentials
   - save
     
 
-#### step-5 :- create a pipeline project
-
-  - new item  --->  Enter an item name = mymail-notification-proj  ---> select pipeline
-
-  - go to pipeline and paste below script  and save it , then `build now`
-
-```
-pipeline {
-      agent any
-      stages {
-          stage('Build') {
-              steps {
-                  echo 'Building...'
-              }
-          }
-          stage('Test') {
-              steps {
-                  echo 'Testing...'
-              }
-          }
-          stage('Deploy') {
-              steps {
-                  echo 'Deploying...'
-              }
-          }
-      }
-      post {
-          success {
-              emailext (
-                  to: 'harry.ofc365@gmail.com',
-                  subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                  body: """<p>Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' succeeded.</p><p>Check console output at <a href='${env.BUILD_URL}'>${env.BUILD_URL}</a></p>""",
-                  mimeType: 'text/html'
-              )
-          }
-          failure {
-              emailext (
-                  to: 'harry.ofc365@gmail.com',
-                  subject: "FAILURE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                  body: """<p>Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' failed.</p><p>Check console output at <a href='${env.BUILD_URL}'>${env.BUILD_URL}</a></p>""",
-                  mimeType: 'text/html'
-              )
-          }
-      }
-  }
-```
-
-
-- go to mail and check it
 
 
 
-=========================================end====================================
-
+-----------------------------------------------------------
